@@ -1,0 +1,433 @@
+/* =========================================================
+   STYLE-RAZZA.CSS - FOGLIO DI STILE UNIVERSALE PER TUTTE LE RAZZE
+   ========================================================= */
+
+/* 1. RESET GENERALE E TIPOGRAFIA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fdfaf3;
+  color: #2b2b2b;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 2. NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 48px;
+  background-color: #fae099;
+}
+
+.navbar .logo {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.navbar .logo a {
+  text-decoration: none;
+  color: #1e1e1e;
+  transition: opacity 0.2s ease;
+}
+
+.navbar .logo a:hover {
+  opacity: 0.75;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #1e1e1e;
+  font-size: 14px;
+  margin-left: 28px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.navbar .nav-links a:hover {
+  opacity: 0.7;
+}
+
+/* 3. HERO BANNER COPERTINA */
+.hero-banner {
+  width: 100%;
+  max-height: 480px;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+/* 4. CONTENITORE CENTRALE & INTRO */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 20px 80px 20px;
+}
+
+.intro-section {
+  margin-bottom: 50px;
+}
+
+.page-title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 44px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #1e1e1e;
+}
+
+.intro-text p {
+  font-size: 13px;
+  color: #333333;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* 5. TITOLI DI SEZIONE */
+.section {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  color: #1e1e1e;
+}
+
+.subsection-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #1e1e1e;
+}
+
+/* 6. CARD CARATTERISTICHE */
+.cards-grid {
+  display: flex;
+  gap: 22px;
+}
+
+.info-card {
+  flex: 1;
+  background-color: transparent;
+  border: 1.5px solid #f6cf70;
+  border-radius: 14px;
+  padding: 30px 20px 26px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 205px;
+}
+
+.info-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #1e1e1e;
+}
+
+.rating-paws {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 18px;
+}
+
+.rating-paws img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.rating-paws img.paw-empty {
+  opacity: 0.22;
+}
+
+.card-desc {
+  font-size: 12.5px;
+  color: #4a4a4a;
+  line-height: 1.5;
+  max-width: 240px;
+}
+
+/* 7. TABELLA MAGGIORI INFORMAZIONI */
+.info-table {
+  background-color: transparent;
+}
+
+.table-row {
+  display: flex;
+  border-top: 1.5px solid #fae099;
+  padding: 16px 8px;
+}
+
+.table-row:last-child {
+  border-bottom: 1.5px solid #fae099;
+}
+
+.row-label {
+  width: 32%;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e1e1e;
+  padding-right: 15px;
+}
+
+.row-content {
+  width: 68%;
+  font-size: 12px;
+  color: #444444;
+  line-height: 1.55;
+}
+
+/* 8. PRO E CONTRO */
+.pros-cons-container {
+  display: flex;
+  gap: 24px;
+}
+
+.box-pro, .box-contra {
+  flex: 1;
+  border: 1.5px solid #fae099;
+  border-radius: 14px;
+  padding: 24px;
+  background-color: transparent;
+}
+
+.box-header {
+  font-size: 15px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1e1e1e;
+}
+
+.icon-check {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.icon-warn {
+  font-size: 12px;
+}
+
+.box-pro ul, .box-contra ul {
+  list-style: none;
+}
+
+.box-pro ul li, .box-contra ul li {
+  font-size: 12px;
+  color: #444444;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.box-pro ul li i, .box-contra ul li i {
+  margin-top: 2px;
+  font-size: 13px;
+  color: #2b2b2b;
+}
+
+/* 9. GALLERIA ASIMMETRICA (1 Grande a sx, 2 impilate a dx) */
+.gallery-asymmetric {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  width: 100%;
+}
+
+.gallery-big {
+  flex: 1.25;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.gallery-big img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-stack {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gallery-stack-item {
+  flex: 1;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.gallery-stack-item img {
+  width: 100%;
+  height: 100%;
+  min-height: 145px;
+  object-fit: cover;
+  display: block;
+}
+
+/* 10. PALETTE COLORI INTERATTIVA UNIVERSALE (VALE PER QUALSIASI CANE) */
+.palette-interactive input[type="radio"] {
+  display: none !important;
+}
+
+.palette-display-box {
+  width: 100%;
+  height: 380px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 22px;
+  background-color: #f0f0f0;
+}
+
+.palette-display-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none; /* Nascoste di base */
+}
+
+/* Switcher universale: 1°, 2° o 3° colore */
+#color-opt-1:checked ~ .palette-display-box .img-opt-1,
+#color-opt-2:checked ~ .palette-display-box .img-opt-2,
+#color-opt-3:checked ~ .palette-display-box .img-opt-3 {
+  display: block !important;
+}
+
+.palette-buttons-row {
+  display: flex;
+  gap: 12px;
+}
+
+.palette-btn {
+  background-color: #ffffff;
+  border: 1.5px solid #fae099;
+  padding: 7px 22px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #333333;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.palette-btn:hover {
+  background-color: #fff9e6;
+}
+
+/* Evidenziazione del bottone selezionato */
+#color-opt-1:checked ~ .palette-buttons-row .btn-opt-1,
+#color-opt-2:checked ~ .palette-buttons-row .btn-opt-2,
+#color-opt-3:checked ~ .palette-buttons-row .btn-opt-3 {
+  background-color: #fae099 !important;
+  border-color: #fae099 !important;
+  font-weight: 700 !important;
+  color: #111111 !important;
+}
+
+/* 11. FOOTER */
+.footer {
+  background-color: #fae099;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 48px;
+  font-size: 12px;
+  color: #2b2b2b;
+}
+
+.footer .social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.footer .social-icons a {
+  color: #1e1e1e;
+  font-size: 16px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer .social-icons a:hover {
+  opacity: 0.7;
+}
+
+.footer .footer-copy {
+  font-size: 12px;
+  color: #333333;
+}
+
+.footer .footer-help a {
+  color: #1e1e1e;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.footer .footer-help a:hover {
+  text-decoration: underline;
+}
+
+/* 12. RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+  .navbar, .footer {
+    padding: 16px 20px;
+  }
+  
+  .cards-grid, 
+  .pros-cons-container,
+  .gallery-asymmetric {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .palette-display-box {
+    height: 240px;
+  }
+
+  .table-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .row-label, 
+  .row-content {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,281 @@
+/* =========================================
+   1. RESET GENERALE E BASE
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fdfaf3; /* Tonalità avorio/crema di sfondo */
+  color: #1e1e1e;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================
+   2. NAVBAR
+   ========================================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 48px;
+  background-color: #fae099;
+}
+
+.navbar .logo {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+.navbar .logo a {
+  text-decoration: none;
+  color: #1e1e1e;
+  transition: opacity 0.2s ease;
+}
+
+/* Leggero effetto al passaggio del mouse */
+.navbar .logo a:hover {
+  opacity: 0.75;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #1e1e1e;
+  font-size: 14px;
+  margin-left: 28px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.navbar .nav-links a:hover {
+  opacity: 0.7;
+}
+
+/* =========================================
+   3. CONTENITORE CENTRALE
+   ========================================= */
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 45px 20px 80px 20px;
+}
+
+/* =========================================
+   4. SEZIONE HERO (TESTO E TITOLO)
+   ========================================= */
+.hero-category {
+  margin-bottom: 45px;
+}
+
+.hero-category h1 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #1e1e1e;
+  margin-bottom: 4px;
+}
+
+.hero-category .tagline {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 18px;
+}
+
+.hero-category .description {
+  font-size: 12.5px;
+  color: #3b3b3b;
+  line-height: 1.6;
+  max-width: 780px;
+}
+
+/* =========================================
+   5. SEZIONI GENERALI
+   ========================================= */
+.section {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #1e1e1e;
+  margin-bottom: 22px;
+}
+
+/* =========================================
+   6. SEZIONE "LE PIÙ AMATE" (CARD CANI)
+   ========================================= */
+.breeds-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.breed-card {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.breed-card:hover {
+  transform: translateY(-3px);
+}
+
+.breed-img-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: 170px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  background-color: #eee;
+}
+
+.breed-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.breed-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e1e1e;
+}
+
+/* =========================================
+   7. SEZIONE "CURIOSITÀ" (BOX CON BORDO GIALLO)
+   ========================================= */
+.curiosity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.curiosity-card {
+  border: 1.5px solid #f6cf70;
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: transparent;
+}
+
+.curiosity-text {
+  flex: 1;
+}
+
+.curiosity-text h3 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #1e1e1e;
+  margin-bottom: 8px;
+}
+
+.curiosity-text p {
+  font-size: 11.5px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.curiosity-img {
+  width: 130px;
+  height: 95px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+.curiosity-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================================
+   8. FOOTER
+   ========================================= */
+.footer {
+  background-color: #fae099;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 48px;
+  font-size: 12px;
+  color: #2b2b2b;
+}
+
+.footer .social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.footer .social-icons a {
+  color: #1e1e1e;
+  font-size: 15px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer .social-icons a:hover {
+  opacity: 0.7;
+}
+
+.footer .footer-copy {
+  font-size: 11.5px;
+  color: #333;
+}
+
+.footer .footer-help a {
+  color: #1e1e1e;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.footer .footer-help a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   9. RESPONSIVE MOBILE
+   ========================================= */
+@media (max-width: 768px) {
+  .navbar, .footer {
+    padding: 16px 20px;
+  }
+
+  .breeds-grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .curiosity-card {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .curiosity-img {
+    width: 100%;
+    height: 160px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}

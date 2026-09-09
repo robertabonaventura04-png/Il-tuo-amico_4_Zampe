@@ -1,0 +1,265 @@
+/* =========================================
+   1. RESET GENERALE E BASE
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fdfaf3; /* Colore crema/avorio di sfondo */
+  color: #1e1e1e;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================
+   2. NAVBAR
+   ========================================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 48px;
+  background-color: #fae099;
+}
+
+.navbar .logo {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+.navbar .logo a {
+  text-decoration: none;
+  color: #1e1e1e;
+  transition: opacity 0.2s ease;
+}
+
+/* Leggero effetto al passaggio del mouse */
+.navbar .logo a:hover {
+  opacity: 0.75;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #1e1e1e;
+  font-size: 14px;
+  margin-left: 28px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.navbar .nav-links a:hover {
+  opacity: 0.7;
+}
+
+/* =========================================
+   3. CONTENITORE CENTRALE & HERO
+   ========================================= */
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 45px 20px 90px 20px;
+}
+
+.hero-section {
+  margin-bottom: 55px;
+}
+
+.hero-section h1 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #1e1e1e;
+  margin-bottom: 6px;
+}
+
+.hero-section .subtitle {
+  font-size: 13px;
+  color: #3b3b3b;
+}
+
+/* =========================================
+   4. STRUTTURA TIMELINE
+   ========================================= */
+.timeline-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 65px;
+}
+
+/* Linea grigia verticale al centro */
+.timeline-line {
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  left: 50%;
+  width: 2px;
+  background-color: #8c8c8c;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Riga singola */
+.timeline-row {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+/* Inversione di posizione per le righe alternate */
+.timeline-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Immagine (occupa il 50% meno lo spazio centrale) */
+.timeline-media {
+  width: calc(50% - 35px);
+  aspect-ratio: 16 / 10;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  background-color: #eee;
+}
+
+.timeline-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Pallino giallo centrale sulla linea */
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 22px;
+  height: 22px;
+  background-color: #fae099;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* Testo descrittivo */
+.timeline-text {
+  width: calc(50% - 35px);
+  margin-left: auto;
+  padding-left: 20px;
+}
+
+.timeline-row.reverse .timeline-text {
+  margin-left: 0;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+.timeline-text h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e1e1e;
+  margin-bottom: 10px;
+}
+
+.timeline-text p {
+  font-size: 11.5px;
+  color: #4a4a4a;
+  line-height: 1.55;
+}
+
+/* =========================================
+   5. FOOTER
+   ========================================= */
+.footer {
+  background-color: #fae099;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 48px;
+  font-size: 12px;
+  color: #2b2b2b;
+}
+
+.footer .social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.footer .social-icons a {
+  color: #1e1e1e;
+  font-size: 15px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer .social-icons a:hover {
+  opacity: 0.7;
+}
+
+.footer .footer-copy {
+  font-size: 11.5px;
+  color: #333;
+}
+
+.footer .footer-help a {
+  color: #1e1e1e;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.footer .footer-help a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   6. RESPONSIVE MOBILE
+   ========================================= */
+@media (max-width: 768px) {
+  .navbar, .footer {
+    padding: 16px 20px;
+  }
+
+  .timeline-line {
+    left: 20px;
+  }
+
+  .timeline-row,
+  .timeline-row.reverse {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 45px;
+    gap: 14px;
+  }
+
+  .timeline-media {
+    width: 100%;
+    height: 190px;
+  }
+
+  .timeline-dot {
+    left: 20px;
+    top: 20px;
+    transform: translate(-50%, 0);
+  }
+
+  .timeline-text,
+  .timeline-row.reverse .timeline-text {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}

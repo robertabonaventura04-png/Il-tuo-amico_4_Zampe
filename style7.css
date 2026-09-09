@@ -1,0 +1,384 @@
+* { margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: sans-serif; 
+}
+
+body { 
+    background-color: #fffaf0; 
+    width: 100vw; 
+    overflow-x: hidden; 
+}
+
+.main-wrapper { 
+    width: 100%; 
+    min-height: 100vh; 
+    background-color: #fffaf0; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.navbar { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #fceecb; 
+    padding: 1px 30px; /* Ridotto leggermente per renderla elegante e snella */
+    position: relative; 
+    width: 100%;
+}
+
+.navbar a {
+    text-decoration: none; 
+    color: #2c2c2c;
+    font-size: 1.1rem;   
+}
+
+.navbar a:hover {
+    color: #8b0000; 
+;         
+}
+
+.nav-links { 
+  display: flex; 
+  gap: 20px; 
+  align-items: center;
+}
+
+.hero { 
+    width: 100%; 
+    max-height: 300px; 
+    overflow: hidden; 
+}
+
+.hero img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center; 
+}
+/* ==========================================
+   2. NAVBAR E MENU A COMPARSA (HEADER)
+   ========================================== */
+.navbar { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #fceecb; 
+    padding: 12px 30px; /* Ridotto leggermente per renderla elegante e snella */
+    position: relative; 
+    width: 100%;
+}
+
+.nav-links { 
+    display: flex; 
+    gap: 20px; 
+    align-items: center;
+}
+
+.nav-links a { 
+    text-decoration: none; 
+    color: #333; 
+    font-size: 1.1rem;
+}
+
+.nav-links a:hover { 
+    color: #8b0000; 
+}
+
+/* Contenitore per il pulsante del menu a destra */
+.menu-container {
+    position: relative;
+}
+
+/* NASCONDE COMPLETAMENTE IL QUADRATINO DEL CHECKBOX */
+.menu-checkbox {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+}
+
+/* Icona con le 3 linee (&#8801;) */
+.menu-icon {
+    font-size: 26px;
+    cursor: pointer;
+    user-select: none;
+    padding: 4px 10px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    display: block;
+    background-color: #ffffff;
+    line-height: 1;
+}
+
+.menu-icon:hover {
+    background-color: #eee;
+}
+
+.dropdown-menu {
+    display: none; /* NASCOSTO DI DEFAULT */
+    position: absolute;
+    top: 100%;
+    right: 0; /* Lo allinea perfettamente a destra sotto l'icona */
+    margin-top: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 1000;
+    width: 300px; /* Larghezza del menu */
+}
+
+.dropdown-menu h4 {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    color: #333;
+    border-bottom: 2px solid #fceecb;
+    padding-bottom: 5px;
+}
+
+/* Griglia su 2 colonne per le razze */
+.dropdown-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Due colonne uguali */
+    gap: 10px 15px;
+}
+
+.dropdown-grid a {
+    text-decoration: none;
+    color: #444;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.dropdown-grid a:hover {
+    color: #8b0000;
+    text-decoration: underline;
+}
+
+/* LA MAGIA: Quando clicchi sulle 3 linee (checkbox attivo), il menu COMPARE */
+.menu-checkbox:checked ~ .dropdown-menu {
+    display: block !important;
+}
+
+
+.content { 
+    padding: 40px 50px; 
+    max-width: 950px; 
+    margin: 0 auto; 
+    width: 100%; 
+}
+
+/* Intestazione allineata a sinistra e in stile con le altre pagine */
+.storia-header { 
+    text-align: left; 
+    margin-bottom: 40px; 
+}
+
+.storia-header h1 { 
+    font-size: 2.5rem; 
+    color: #2c2c2c; 
+    margin-bottom: 5px; 
+}
+
+.storia-header .subtitle { 
+    font-size: 1.2rem; 
+    color: #555; 
+    font-weight: bold; 
+    margin-bottom: 20px; 
+}
+
+.intro-storia { 
+    font-size: 1.15rem; 
+    color: #2c2c2c; 
+    line-height: 1.7; 
+    text-align: justify;
+}
+
+/* Struttura della Timeline a zig-zag */
+.timeline { 
+    position: relative; 
+    margin: 40px 0; 
+}
+
+.timeline-line { 
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 4px; 
+    height: 100%; 
+    background-color: #f7e7c4; 
+    top: 0; 
+}
+
+.timeline-item { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 50px; 
+    position: relative; 
+}
+
+.timeline-content { 
+    width: 45%; 
+}
+
+.timeline-dot { 
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 22px; 
+    height: 22px; 
+    background-color: #fceecf; 
+    border: 4px solid #d4a373; 
+    border-radius: 50%; 
+    z-index: 2; 
+}
+
+.card-storia { 
+    background-color: #fceecf; 
+    border-radius: 15px; 
+    padding: 12px; 
+    text-align: center; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+}
+
+.card-storia img { 
+    width: 100%; 
+    height: 170px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    margin-bottom: 8px; 
+}
+
+.card-title { 
+    font-weight: bold; 
+    color: #2c2c2c; 
+    display: block; 
+    font-size: 1rem; 
+}
+
+.text-side { 
+    font-size: 1.05rem; 
+    line-height: 1.6; 
+    color: #2c2c2c; 
+    padding: 0 10px; 
+}
+
+/* Footer Aggiornato e Corretto */
+.footer { 
+    background-color: #f7e7c4; 
+    padding: 20px 40px; 
+    margin-top: auto; 
+    border-top: 1px solid #d4a373; 
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; 
+    gap: 15px;
+}
+
+.footer-social { 
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.footer-social img {
+    width: 24px;   /* Fissa la larghezza per evitare che l'immagine sia gigantesca */
+    height: 24px;  /* Fissa l'altezza */
+    object-fit: contain;
+}
+
+.footer-copy {
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+}
+
+.footer-help a {
+    text-decoration: none;
+    color: #2c2c2c;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.footer-help a:hover {
+    text-decoration: underline;
+}
+
+.dots { 
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+}
+
+.dot { 
+    width: 18px; 
+    height: 18px; 
+    background-color: #f7e7c4; 
+    border-radius: 50%; 
+}
+
+/* Responsive per smartphone */
+@media screen and (max-width: 768px) {
+
+    .content {
+        padding: 20px 20px !important;
+    }
+
+    .timeline-line,
+    .timeline-dot {
+        display: none !important;
+    }
+
+    .timeline-item {
+        flex-direction: column !important;
+        gap: 15px;
+        margin-bottom: 35px;
+    }
+
+    .timeline-content {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .text-side {
+        padding: 0 !important;
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    .storia-header h1 {
+        font-size: 2rem;
+    }
+
+    .storia-header .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .navbar {
+        padding: 12px 15px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+    }
+
+    /* CORRETTO: aggiunto il punto (.) davanti a footer-container */
+    .footer-container {
+        flex-direction: column; 
+        text-align: center;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+}
